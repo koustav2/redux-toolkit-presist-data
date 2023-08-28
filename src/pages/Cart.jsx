@@ -11,7 +11,6 @@ const Cart = () => {
   };
 
   const totalPrice = products.reduce((total, item) => total + item.price, 0);
-  const price = products.forEach((item) => <div>item.price</div>);
   return (
     <div>
       <h3>Cart</h3>
@@ -28,7 +27,6 @@ const Cart = () => {
         ))}
       </div>
       <h4>{totalPrice}</h4>
-      <ul>{price}</ul>
     </div>
   );
 };
