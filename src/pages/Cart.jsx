@@ -9,6 +9,9 @@ const Cart = () => {
   const handleRemove = (item) => {
     dispatch(removeItem(item));
   };
+
+  const totalPrice = products.reduce((total, item) => total + item.price, 0);
+  const price = products.forEach((item) => <div>item.price</div>);
   return (
     <div>
       <h3>Cart</h3>
@@ -24,6 +27,8 @@ const Cart = () => {
           </div>
         ))}
       </div>
+      <h4>{totalPrice}</h4>
+      <ul>{price}</ul>
     </div>
   );
 };
